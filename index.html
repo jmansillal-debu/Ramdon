@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ModaUrban21 | Inicio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="cabecera">
+    <nav class="barra-navegacion">
+      <div class="logotipo">
+        <img src="image/LogoMODaURban.png" alt="Logo ModaUrban21" class="imagen-logotipo">
+        <span>ModaUrban21</span>
+      </div>
+
+      <ul class="enlaces-navegacion">
+        <li><a href="index.html" class="enlace-activo">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+      </ul>
+
+      <div class="acciones-usuario">
+        <button id="boton-carrito" class="boton-icono">🛒 <span id="contador-carrito">0</span></button>
+        <a href="login.html" id="boton-login-nav" class="boton boton-secundario">Iniciar Sesión</a>
+        <span id="saludo-usuario" class="saludo-usuario"></span>
+        <button id="boton-cerrar-sesion" class="boton-salir oculto">Salir</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="seccion-principal">
+      <div class="contenido-principal">
+        <span class="etiqueta anim-pulso">Colección 2026</span>
+        <h1>Streetwear & Cyber Aesthetics</h1>
+        <p>Descubre la nueva línea de ropa urbana, techwear y piezas exclusivas diseñadas con el estilo más limpio y vanguardista.</p>
+        <div class="botones-principal">
+          <a href="catalogo.html" class="boton boton-primario boton-efecto">Explorar Catálogo</a>
+          <a href="nosotros.html" class="boton boton-secundario">Conócenos</a>
+        </div>
+      </div>
+      <div class="imagen-principal">
+        <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=800&q=80" alt="Colección ModaUrban21">
+      </div>
+    </section>
+
+    <section class="seccion-destacados">
+      <h2>Novedades Destacadas</h2>
+      <div id="rejilla-destacados" class="rejilla-productos"></div>
+    </section>
+  </main>
+
+  <div id="modal-carrito" class="modal">
+    <div class="contenido-modal-carrito">
+      <span class="cerrar-modal" id="cerrar-carrito">&times;</span>
+      <h2>Tu Carrito de Compras</h2>
+      <div id="elementos-carrito" class="elementos-carrito"></div>
+      <div class="pie-carrito">
+        <p>Total: S/ <span id="total-carrito">0.00</span></p>
+        <button id="boton-checkout" class="boton boton-primario boton-bloque">Finalizar Compra</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 ModaUrban21. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

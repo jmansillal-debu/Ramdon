@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ModaUrban21 | Acceso y Registro VIP Interactivo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="cabecera">
+    <nav class="barra-navegacion">
+      <div class="logotipo">
+        <img src="image/LogoMODaURban.png" alt="Logo ModaUrban21" class="imagen-logotipo">
+        <span>ModaUrban21</span>
+      </div>
+
+      <ul class="enlaces-navegacion">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+      </ul>
+
+      <div class="acciones-usuario">
+        <button id="boton-carrito" class="boton-icono">🛒 <span id="contador-carrito">0</span></button>
+        <a href="login.html" id="boton-login-nav" class="boton boton-secundario enlace-activo">Iniciar Sesión</a>
+        <span id="saludo-usuario" class="saludo-usuario"></span>
+        <button id="boton-cerrar-sesion" class="boton-salir oculto">Salir</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenedor-pagina">
+    <section class="seccion-login animar-entrada">
+      
+      <!-- PANEL INFORMATIVO DETALLADO -->
+      <div class="panel-info-login tarj-animada">
+        <span class="etiqueta anim-pulso">🔥 URBAN VIP CLUB</span>
+        <h2>ModaUrban21 Vault</h2>
+        <p>Tu acceso directo a la vanguardia streetwear y techwear. Crea tu perfil para formar parte de la comunidad urbana exclusiva.</p>
+        
+        <div class="malla-beneficios">
+          <div class="item-beneficio">
+            <span class="icono-beneficio">⚡</span>
+            <div>
+              <strong>Drops Prioritarios</strong>
+              <p>Acceso 24 horas antes a colecciones limitadas Oversize y Cyberpunk.</p>
+            </div>
+          </div>
+
+          <div class="item-beneficio">
+            <span class="icono-beneficio">🏷️</span>
+            <div>
+              <strong>Precios Exclusivos VIP</strong>
+              <p>Descuentos especiales aplicados automáticamente en tu carrito de compras.</p>
+            </div>
+          </div>
+
+          <div class="item-beneficio">
+            <span class="icono-beneficio">🚚</span>
+            <div>
+              <strong>Rastreo en Tiempo Real</strong>
+              <p>Monitorea tus envíos con mapas e historial de pedidos centralizados.</p>
+            </div>
+          </div>
+
+          <div class="item-beneficio">
+            <span class="icono-beneficio">🎮</span>
+            <div>
+              <strong>Perfil y Medallas</strong>
+              <p>Guarda tu Apodo para eventos presenciales, sorteos comunitarios y beneficios acumulables.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTENEDOR INTERACTIVO: PREVISUALIZACIÓN DE CARNET VIP -->
+        <div class="tarjeta-carnet-vip" id="tarjeta-vip-preview">
+          <div class="encabezado-carnet">
+            <span class="insignia-vip">VIP MEMBER CARD</span>
+            <span class="estado-credencial">NUEVO PERFIL</span>
+          </div>
+          <div class="cuerpo-carnet">
+            <h3 id="preview-nombre">Tu Nombre Aquí</h3>
+            <p id="preview-apodo">@usuario_vip</p>
+            <p id="preview-correo">correo@ejemplo.com</p>
+          </div>
+          <div class="pie-carnet">
+            <small>ModaUrban21 Digital Pass</small>
+            <span class="codigo-chip">💳 VIP-2026</span>
+          </div>
+        </div>
+
+        <div class="tarjeta-soporte">
+          <p><strong>¿Dudas con tu cuenta?</strong></p>
+          <small>Escríbenos directamente a <a href="mailto:soporte@modaurban21.com">soporte@modaurban21.com</a></small>
+        </div>
+      </div>
+
+      <!-- CONTAINER PRINCIPAL DE FORMULARIOS -->
+      <div class="tarjeta-login tarj-animada">
+
+        <!-- VISTA: INICIAR SESIÓN -->
+        <div id="vista-login" class="bloque-formulario animar-fade">
+          <h2>Iniciar Sesión</h2>
+          <p class="subtitulo-login">Ingresa a tu cuenta para explorar y comprar.</p>
+          
+          <form id="formulario-login-pagina">
+            
+            <div class="caja-dato-individual">
+              <span class="insignia-campo">IDENTIFICACIÓN</span>
+              <label for="usuario">Apodo o Correo Electrónico</label>
+              <input type="text" id="usuario" placeholder="Ej: CyberHunter21 o correo@ejemplo.com" required>
+            </div>
+            
+            <div class="caja-dato-individual">
+              <span class="insignia-campo">SEGURIDAD</span>
+              <label for="clave">Contraseña</label>
+              <div class="campo-password-wrap">
+                <input type="password" id="clave" placeholder="••••••••" required>
+                <button type="button" class="btn-toggle-pass" data-target="clave">👁️</button>
+              </div>
+            </div>
+
+            <div class="opciones-login">
+              <label><input type="checkbox" id="recordar"> Recordarme</label>
+              <a href="#" id="enlace-olvide" class="enlace-secundario">¿Olvidaste tu contraseña?</a>
+            </div>
+
+            <button type="submit" class="boton boton-primario boton-bloque boton-efecto">Entrar a ModaUrban21</button>
+          </form>
+
+          <div class="cambio-vista">
+            <p>¿Aún no tienes cuenta? <a href="#" id="enlace-registro" class="enlace-destacado">Regístrate aquí</a></p>
+          </div>
+        </div>
+
+        <!-- VISTA: REGISTRO INTERACTIVO CON CONTENEDORES INDIVIDUALES -->
+        <div id="vista-registro" class="bloque-formulario oculto animar-fade">
+          <h2>Crear Cuenta VIP</h2>
+          <p class="subtitulo-login">Ingresa cada dato en su contenedor individual.</p>
+
+          <form id="formulario-registro-pagina">
+            
+            <!-- CONTENEDOR INDIVIDUAL 1 -->
+            <div class="caja-dato-individual" id="contenedor-apodo">
+              <span class="insignia-campo">01. USUARIO</span>
+              <label for="reg-apodo">Apodo / Username</label>
+              <input type="text" id="reg-apodo" placeholder="Ej: CyberKing21" required>
+              <small class="feedback-valida"></small>
+            </div>
+
+            <!-- CONTENEDOR INDIVIDUAL 2 -->
+            <div class="caja-dato-individual" id="contenedor-nombres">
+              <span class="insignia-campo">02. NOMBRES</span>
+              <label for="reg-nombres">Nombres Completos</label>
+              <input type="text" id="reg-nombres" placeholder="Ej: Jose Fernando" required>
+              <small class="feedback-valida"></small>
+            </div>
+
+            <!-- CONTENEDOR INDIVIDUAL 3 -->
+            <div class="caja-dato-individual" id="contenedor-apellidos">
+              <span class="insignia-campo">03. APELLIDOS</span>
+              <label for="reg-apellidos">Apellidos Completos</label>
+              <input type="text" id="reg-apellidos" placeholder="Ej: Mansilla Linise" required>
+              <small class="feedback-valida"></small>
+            </div>
+
+            <!-- CONTENEDOR INDIVIDUAL 4 -->
+            <div class="caja-dato-individual" id="contenedor-correo">
+              <span class="insignia-campo">04. CORREO</span>
+              <label for="reg-correo">Correo Electrónico</label>
+              <input type="email" id="reg-correo" placeholder="ejemplo@correo.com" required>
+              <small class="feedback-valida"></small>
+            </div>
+
+            <!-- CONTENEDOR INDIVIDUAL 5 -->
+            <div class="caja-dato-individual" id="contenedor-clave">
+              <span class="insignia-campo">05. CONTRASEÑA</span>
+              <label for="reg-clave">Contraseña de Acceso</label>
+              <div class="campo-password-wrap">
+                <input type="password" id="reg-clave" placeholder="Mínimo 8 caracteres" required>
+                <button type="button" class="btn-toggle-pass" data-target="reg-clave">👁️</button>
+              </div>
+              <div class="barra-fuerza"><div id="fuerza-nivel"></div></div>
+              <small id="texto-fuerza">Seguridad de la clave</small>
+            </div>
+
+            <!-- CONTENEDOR INDIVIDUAL 6 -->
+            <div class="caja-dato-individual" id="contenedor-confirmar">
+              <span class="insignia-campo">06. VERIFICACIÓN</span>
+              <label for="reg-confirmar">Repetir Contraseña</label>
+              <div class="campo-password-wrap">
+                <input type="password" id="reg-confirmar" placeholder="Confirma tu clave" required>
+                <button type="button" class="btn-toggle-pass" data-target="reg-confirmar">👁️</button>
+              </div>
+              <small class="feedback-valida"></small>
+            </div>
+
+            <div class="opciones-login">
+              <label><input type="checkbox" id="reg-terminos" required> Acepto Términos y Condiciones</label>
+            </div>
+
+            <button type="submit" class="boton boton-primario boton-bloque boton-efecto">Completar Registro VIP</button>
+          </form>
+
+          <div class="cambio-vista">
+            <p>¿Ya tienes cuenta? <a href="#" id="enlace-volver-login-1" class="enlace-destacado">Iniciar Sesión</a></p>
+          </div>
+        </div>
+
+        <!-- VISTA: RECUPERAR CONTRASEÑA -->
+        <div id="vista-recuperar" class="bloque-formulario oculto animar-fade">
+          <h2>Recuperar Cuenta</h2>
+          <p class="subtitulo-login">Ingresa tu correo registrado para enviarte las instrucciones.</p>
+
+          <form id="formulario-recuperar-pagina">
+            <div class="caja-dato-individual">
+              <span class="insignia-campo">RECUPERACIÓN</span>
+              <label for="rec-correo">Correo Electrónico</label>
+              <input type="email" id="rec-correo" placeholder="tu-correo@ejemplo.com" required>
+            </div>
+
+            <button type="submit" class="boton boton-primario boton-bloque boton-efecto">Restablecer Contraseña</button>
+          </form>
+
+          <div class="cambio-vista">
+            <p><a href="#" id="enlace-volver-login-2" class="enlace-destacado">← Volver al Inicio de Sesión</a></p>
+          </div>
+        </div>
+
+        <div id="mensaje-login-pagina" class="mensaje-alerta"></div>
+
+      </div>
+    </section>
+  </main>
+
+  <div id="modal-carrito" class="modal">
+    <div class="contenido-modal-carrito">
+      <span class="cerrar-modal" id="cerrar-carrito">&times;</span>
+      <h2>Tu Carrito de Compras</h2>
+      <div id="elementos-carrito" class="elementos-carrito"></div>
+      <div class="pie-carrito">
+        <p>Total: S/ <span id="total-carrito">0.00</span></p>
+        <button id="boton-checkout" class="boton boton-primario boton-bloque">Finalizar Compra</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 ModaUrban21. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
